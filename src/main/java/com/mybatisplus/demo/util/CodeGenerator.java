@@ -16,7 +16,7 @@ import java.util.Scanner;
 
 /**
  * @author ceshi
- * @Title:
+ * @Title:  根据数据库生成代码 代码生成器
  * @Package
  * @Description:
  * @date 2021-05-249:26

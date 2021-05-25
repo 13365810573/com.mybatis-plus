@@ -3,6 +3,7 @@ package com.mybatisplus.demo.controller;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.mybatisplus.demo.bean.User;
+import com.mybatisplus.demo.common.Result;
 import com.mybatisplus.demo.mapper.UserMapper;
 import com.mybatisplus.demo.service.impl.UserServiceImpl;
 import org.omg.PortableInterceptor.INACTIVE;
@@ -33,7 +34,7 @@ public class UserController {
     private UserServiceImpl userService;
 
     @GetMapping("/hello")
-    public List<User> userList(){
+    public Result userList(){
         System.out.println(("----- selectAll method test ------"));
         List<User> userList = userMapper.selectList(null);
         List<Long> collect = userList.stream().map(k -> {
@@ -51,6 +52,7 @@ public class UserController {
         boolean b = userService.updateById(user);
         System.out.println(b);
         System.out.println(user);
-        return userList;
+
+        return Result.succ(userList);
     }
 }

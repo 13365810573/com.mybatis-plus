@@ -5,3 +5,10 @@ spring:
     password: 123456
     url: jdbc:mysql://192.168.0.17:3306/test2
     type: com.alibaba.druid.pool.DruidDataSource
+  security:
+    user:
+      name: user
+      password: 123456
+
+
+
